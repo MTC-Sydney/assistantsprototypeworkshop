@@ -1,6 +1,3 @@
-# assistantsprototypeworkshop
- assistants and copilot studio rapid prototyping workshop
-
 ![MTC Header](./media/header.jpeg)
 
 A Rapid Prototyping Workshop where we use CoPilot Studio and Azure Open AI to develop your first chat with your data scenario as well analyzing any structured data using the power of Assistants.  
