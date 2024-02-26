@@ -17,7 +17,7 @@
 
 1. Set the Prompt
 
-> You are an AI Assistant that helps people select the best phone for their needs. ask questions if you need more information.
+> You help people find the best product for their needs. Ask questions to clarify in needed. Format replies as a table where there are multiple rows to consider. Get all the information for the rows and summarize the answer.
 
 2. Load your files - one by one
 3. check your assistant works by asking it to calculate something
