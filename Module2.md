@@ -4,16 +4,13 @@
 
 ![Hands On Logo](./media/workshop.png)
 
-## Module 2 
+## Module 2 - Please complete the following steps
 
-### Please complete the following steps
-
-1. Prequisites
-2. Get ready to create your first Assistant
-![Complete these Steps](https://learn.microsoft.com/en-us/azure/ai-services/openai/assistants-quickstart?tabs=command-line&pivots=programming-language-studio#prerequisites)
+### Prequisites
+1. Get ready to create your first Assistant
+[Complete these Steps](https://learn.microsoft.com/en-us/azure/ai-services/openai/assistants-quickstart?tabs=command-line&pivots=programming-language-studio#prerequisites)
 
 ### Creating Your Assistant
-
 
 1. Set the Prompt
 
@@ -22,7 +19,7 @@
 2. Load your files - one by one
 3. check your assistant works by asking it to calculate something
 
-
+#### Dealing with Multi-Header files
 
 If your dataset is complex you may need to do additional steps as the underlying engine is dataframes based. 
 
@@ -49,7 +46,12 @@ df.to_csv('NBNInternetPricingFlattened.csv', index=False)
 
 ```
 
-Then rename the columns, but get the assistant to write the code to rename the columns for you. The result could look something like
+Then rename the columns, but get the assistant to write the code to rename the columns for you.
+
+Your message to the agent could be something like 
+> Rename the columns to something sensible, remove the \n and give me the python code to do the renaming
+
+ The result could look something like
 
 ```
 
@@ -95,7 +97,18 @@ data_renamed.to_csv('NBNInternetPricingFlattenedRenamed.csv', index=False)
 
 ```
 
+### Testing your Assistant
 
+
+1. Remove the old file. Save. 
+2. Upload the new file. Save.
+3. Ask the question 
+> i live in the CBD and want a 100 MBit line. what are my options for 36 months?
+
+
+### Now Create an Application to call the Assistant API
+
+[Go to Module 3](./Module3.md)
 
 
 add additional information to the system prompt that describes the dataset. An example is 
