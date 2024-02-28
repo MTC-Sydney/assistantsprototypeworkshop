@@ -8,9 +8,7 @@
 
 Create a copilot
 
-Create a copilot
-
-1.	Go to the Microsoft Copilot Studio home page.
+1.	Go to the Microsoft ![Copilot Studio](https://copilotstudio.microsoft.com/) home page.
 
 2.	Select + New copilot from the Copilots page, or select Home then choose + Create a copilot.
 ![Copilot Create](./media/Copilot Create.png)
