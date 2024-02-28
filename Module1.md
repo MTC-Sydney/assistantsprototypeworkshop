@@ -8,13 +8,16 @@
 
 Create a copilot
 
-1. Go to the Microsoft Copilot Studio home page (https://copilotstudio.microsoft.com/).
-2. Select + New copilot from the Copilots page, or select Home then choose + Create a copilot.
-3. For Copilot name, enter a name for your copilot.
-4. For What language do you want your copilot to speak?, select the language you want your copilot to speak. For more information, see Supported languages.
-Select Create.
+Create a copilot
 
+1.	Go to the Microsoft Copilot Studio home page.
 
+2.	Select + New copilot from the Copilots page, or select Home then choose + Create a copilot.
+![Copilot Create](./media/Copilot Create.png)
+ 
+
+3.	For Copilot name, enter a name for your copilot and hit Create
+ ![Copilot Create 1](./media/Copilot Create 1.png)
 
 
 ![Footer](./media/footer.png)
