@@ -6,10 +6,9 @@
 
 ## Module 4 - Publish to Teams
 
-### Connect CoPilot Studio to Assistants via Azure Funtions
-Connect Smart Assistant to Azure OpenAI Assistants via an Azure Function
+### Connect Smart Assistant to Azure OpenAI Assistants via an Azure Function
 
-Edit copilot topic
+#### Edit copilot topic
 
 1.	Go to the Microsoft Copilot Studio home page.
 
@@ -20,9 +19,7 @@ Edit copilot topic
 4.	Select the “Fallback” topic name to edit.
 5.	Under the Trigger box, hit the “+” button and select “Call an action”  “Create a flow”.
  
-
-
-Create connection to Azure OpenAI Assistants
+#### Create connection to Azure OpenAI Assistants
 
 6.	This will open a new tab for you to create a flow with a start and an end step to connect with your copilot.
  
@@ -121,11 +118,11 @@ o	Value - <<YOUR AZURE FUNCTION KEY>>
 26.	Click save 
  
 
-Complete topic authoring
+#### Complete topic authoring
 
 
 
-### Publish the bot to Teams.
+### Publish the copilot to Teams.
 
 
 
