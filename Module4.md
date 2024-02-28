@@ -175,6 +175,22 @@ o	Value - <<YOUR AZURE FUNCTION KEY>>
 
 ### Publish the copilot to Teams.
 
+1.	In the left navigation pane of copilot studio, click publish.
+2.	Then click the “Publish” button.
+     
+   ![Copilot Topic](./media/copilot-connect-22.png)
+  	
+
+3.	Expand the “Settings” section in the navigation pane and then click “Channels”.
+     
+   ![Copilot Topic](./media/copilot-connect-23.png)
+  	
+
+4.	Click on the Teams tile and then click “Open Bot”
+    
+   ![Copilot Topic](./media/copilot-connect-24.png)
+  	
+
 
 
 ![Footer](./media/footer.png)
