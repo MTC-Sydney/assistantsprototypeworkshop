@@ -157,6 +157,19 @@ o	Value - <<YOUR AZURE FUNCTION KEY>>
   	
 
 #### Complete topic authoring
+27.	Add the following parameters to the Action in topic.
+     
+   ![Copilot Topic](./media/copilot-connect-19.png)
+  	
+
+28.	Complete the topic branching as follows.
+    
+   ![Copilot Topic](./media/copilot-connect-20.png)
+
+   
+    
+   ![Copilot Topic](./media/copilot-connect-21.png)
+  	
 
 
 
