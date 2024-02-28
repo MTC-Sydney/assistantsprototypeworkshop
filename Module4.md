@@ -11,9 +11,11 @@
 #### Edit copilot topic
 
 1.	Go to the Microsoft Copilot Studio home page.
+   
    ![Copilot Topic](./media/copilot-connect.png)
   	
 3.	Click the copilot you wish to edit.
+   
    ![Copilot Topic](./media/copilot-connect-1.png)
   	
 5.	Under the “Topics & Plugin” section click the “System” tab.
