@@ -12,12 +12,14 @@
 
 1.	Go to the Microsoft Copilot Studio home page.
    ![Copilot Topic](./media/copilot-connect.png)
-2.	Click the copilot you wish to edit.
+  	
+3.	Click the copilot you wish to edit.
    ![Copilot Topic](./media/copilot-connect-1.png)
-3.	Under the “Topics & Plugin” section click the “System” tab.
+  	
+5.	Under the “Topics & Plugin” section click the “System” tab.
  
-4.	Select the “Fallback” topic name to edit.
-5.	Under the Trigger box, hit the “+” button and select “Call an action”  “Create a flow”.
+6.	Select the “Fallback” topic name to edit.
+7.	Under the Trigger box, hit the “+” button and select “Call an action”  “Create a flow”.
  
 #### Create connection to Azure OpenAI Assistants
 
