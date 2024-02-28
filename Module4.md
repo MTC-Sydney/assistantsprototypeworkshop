@@ -11,9 +11,9 @@
 #### Edit copilot topic
 
 1.	Go to the Microsoft Copilot Studio home page.
-
+   ![Copilot Topic](./media/copilot-connect.png)
 2.	Click the copilot you wish to edit.
- 
+   ![Copilot Topic](./media/copilot-connect-1.png)
 3.	Under the “Topics & Plugin” section click the “System” tab.
  
 4.	Select the “Fallback” topic name to edit.
