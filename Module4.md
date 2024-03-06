@@ -43,34 +43,51 @@
   	
 9.	Select the “HTTP” action and complete the following details
 -	Rename step to “Azure Function”
--	URI - https://smart-assistants-chat.azure-api.net/ai/ask-question
+-	URI - https://\<your-api-url-from-module3>/ai/ask-question
 -	Method – POST
--	Headers
-o	Key - subscription-key
-o	Value - <<YOUR AZURE FUNCTION KEY>>
--	Body
+-	Headers:
+  -	Key - subscription-key
+  -	Value - \<subscription-key-to-your-api-from-module3>
+-	Body: 
+
+```JSON
 {
-"assistants": [
-"asst_18nASIotfRPVMZSQ41f5uynD"
-],
-"context": "",
-"prompt": ""
-} 
-   
-   ![Copilot Topic](./media/copilot-connect-6.png)
+   "assistants": [
+     "\<name-of-your-assistant>"
+   ],
+   "context": "",
+   "prompt": 
+}
+```
   	
-10.	Click between the “” for “context” variable and click the lightning icon.
+10.	Click between the quotation marks (\"\") for the `context` value variable and then click the lightning icon.
+
 11.	Then select the dynamic variable “Context” under “When Power Virtual Agents calls a flow” 
     
    ![Copilot Topic](./media/copilot-connect-7.png)
+  
   	
-12.	Repeat step 11 for “prompt” and this time use “UserInput”.
-13.	Add a new action “Parse JSON”
-14.	Under the content parameter, select the lightning icon and select “Body” from the “Azure Function” section.
+12.	Now, click where the value goes for the `prompt` field, and then click on the **fx** icon. In the large "function" input, set the function to: 
+
+```
+string(triggerBody()?['text'])
+```
+
+![Prompt Input Function](./media/prompt-input-function.png)
+
+
+13. The Azure Function HTTP Action config should look something like this: 
+
+![Copilot Topic](./media/copilot-connect-6.png)
+
+  > NB: This image shows how you can work with multiple assistants with an interpreter - this is an advanced integration and not required for this module. 
+
+14.	Add a new action “Parse JSON”
+15.	Under the content parameter, select the lightning icon and select “Body” from the “Azure Function” section.
     
    ![Copilot Topic](./media/copilot-connect-8.png)
   	
-15.	Paste the following sample schema in the schema box
+16.	Paste the following sample schema in the schema box
 {
     "type": "object",
     "properties": {
@@ -112,37 +129,37 @@ o	Value - <<YOUR AZURE FUNCTION KEY>>
         }
     }
 }
-16.	Add another action; “Initialize variable” to capture the Assistant response.
-17.	Name the variable “chat-response” and type as “String”.
+17.	Add another action; “Initialize variable” to capture the Assistant response.
+18.	Name the variable “chat-response” and type as “String”.
     
    ![Copilot Topic](./media/copilot-connect-9.png)
   	
-18.	After initializing the variable, click the “+” button and add and action called “Apply to each”.
+19.	After initializing the variable, click the “+” button and add and action called “Apply to each”.
     
    ![Copilot Topic](./media/copilot-connect-10.png)
   	
-19.	Under the “Parameters” tab, click the lightning icon for “Select An Output From Previous Steps” and add “Body responses” from the Parse JSON section.
+20.	Under the “Parameters” tab, click the lightning icon for “Select An Output From Previous Steps” and add “Body responses” from the Parse JSON section.
     
    ![Copilot Topic](./media/copilot-connect-11.png)
   	
-20.	Inside the 1st “Apply to each” loop hit the “+” button and add another “Apply to each” loop.
+21.	Inside the 1st “Apply to each” loop hit the “+” button and add another “Apply to each” loop.
     
    ![Copilot Topic](./media/copilot-connect-12.png)
   	
-21.	Under the “Parameters” tab, click the lightning icon for “Select An Output From Previous Steps” and add “Body content” from the Parse JSON section.
+22.	Under the “Parameters” tab, click the lightning icon for “Select An Output From Previous Steps” and add “Body content” from the Parse JSON section.
     
    ![Copilot Topic](./media/copilot-connect-13.png)
   	
-22.	In the 2nd “Apply to each” loop, hit the “+” button and search for “Append to string variable” action.
+23.	In the 2nd “Apply to each” loop, hit the “+” button and search for “Append to string variable” action.
      
    ![Copilot Topic](./media/copilot-connect-14.png)
   	
-23.	Under the “Parameters” tab Select “chat-response” and under value, click the lightning icon.
-24.	Then select “Current item” under the “Apply to each” section. IMPORTANT: make sure the current item value is from the nested “Apply to each” section and not the outer “Apply to each” section.
+24.	Under the “Parameters” tab Select “chat-response” and under value, click the lightning icon.
+25.	Then select “Current item” under the “Apply to each” section. IMPORTANT: make sure the current item value is from the nested “Apply to each” section and not the outer “Apply to each” section.
     
    ![Copilot Topic](./media/copilot-connect-15.png)
   	
-25.	Click on the last step “Return value(s) to Power Virtual Agents” and add two parameters
+26.	Click on the last step “Return value(s) to Power Virtual Agents” and add two parameters
 -	AIOutput – Click on the lightning icon and select “chat response” under the “Variables” section.
     
    ![Copilot Topic](./media/copilot-connect-16.png)
@@ -151,18 +168,18 @@ o	Value - <<YOUR AZURE FUNCTION KEY>>
     
    ![Copilot Topic](./media/copilot-connect-17.png)
   	
-26.	Click save 
+27.	Click save 
     
    ![Copilot Topic](./media/copilot-connect-18.png)
   	
 
 #### Complete topic authoring
-27.	Add the following parameters to the Action in topic.
+28.	Add the following parameters to the Action in topic.
      
    ![Copilot Topic](./media/copilot-connect-19.png)
   	
 
-28.	Complete the topic branching as follows.
+29.	Complete the topic branching as follows.
     
    ![Copilot Topic](./media/copilot-connect-20.png)
 
