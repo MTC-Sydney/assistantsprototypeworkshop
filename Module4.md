@@ -46,14 +46,13 @@
 -	URI - https://\<your-api-url-from-module3>/ai/ask-question
 -	Method – POST
 -	Headers:
-  -	Key - subscription-key
-  -	Value - \<subscription-key-to-your-api-from-module3>
+    -	`subscription-key`: \<subscription-key-to-your-api-from-module3>
 -	Body: 
 
 ```JSON
 {
    "assistants": [
-     "\<name-of-your-assistant>"
+     "<name-of-your-assistant>"
    ],
    "context": "",
    "prompt": 
@@ -88,6 +87,7 @@ string(triggerBody()?['text'])
    ![Copilot Topic](./media/copilot-connect-8.png)
   	
 16.	Paste the following sample schema in the schema box
+```JSON
 {
     "type": "object",
     "properties": {
@@ -129,6 +129,7 @@ string(triggerBody()?['text'])
         }
     }
 }
+```
 17.	Add another action; “Initialize variable” to capture the Assistant response.
 18.	Name the variable “chat-response” and type as “String”.
     
